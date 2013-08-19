@@ -21,7 +21,7 @@ Subject Responses to Trial Substances
 - GCC (4.8.1): Bad gas and foul odor. Delusional episodes about little creatures
   with long ears and green hats.
 - ICC (14): Constipation and obsessive nose-picking.
-- Clang (3.4): Diarrhea and lactose-intolerance.
+- Clang (3.4): Diarrhea and temporary lactose-intolerance.
 - MSVC: **pffffft** Hah! **COFF COFF COFF**
 
 # TODO
