@@ -12,10 +12,10 @@ diarrhea. It does this by equipping you with a set of generic metaprogramming
 operations that operate on multidimensional ranges---accumulation operations,
 transformation operations, generation operations, and many others. If you need
 to do something _utterly vile and repulsive_, like generate and perform
-computations on multidimensional tensors during compile time, this library is
-for you. After you force-feed your compiler your code (as if any sane compiler
-would lex it voluntarily!), pour some Pepto-Bismol on your computer, because
-your computer needs it.
+computations on tensors during compile time, this library is for you. After you
+force-feed your compiler your code (as if any sane compiler would lex it
+voluntarily!), pour some Pepto-Bismol on your computer, because your computer
+needs it.
 
 Subject Responses to Trial Substances
 - GCC (4.8.1): Bad gas and foul odor. Delusional episodes about little creatures
