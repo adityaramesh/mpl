@@ -26,7 +26,8 @@ Subject Responses to Trial Substances
 
 # TODO
 
-Documentation. Hah!
+- Documentation. Hah!
+- Finish `permutation.hpp`.
 
 # Compilation
 
