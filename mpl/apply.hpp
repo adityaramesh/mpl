@@ -12,6 +12,7 @@
 #ifndef Z3C81EB73_0D6C_4245_9C56_DDAD0D891205
 #define Z3C81EB73_0D6C_4245_9C56_DDAD0D891205
 
+#include <type_traits>
 #include <mpl/sequence.hpp>
 
 namespace mpl {
@@ -26,20 +27,14 @@ namespace mpl {
 */
 
 template <class T>
-struct check
-{
-	static constexpr bool value = true;
-};
+struct check : std::true_type {};
 
 template <
 	template <class...> class Function,
 	class                     S,
 	class                     Check = void
 >
-struct is_alias
-{
-	static constexpr bool value = true;
-};
+struct is_alias : std::true_type {};
 
 template <
 	template <class...> class Function,
@@ -51,10 +46,7 @@ struct is_alias<
 	typename std::enable_if<
 		check<typename Function<Ts...>::type>::value
 	>::type
->
-{
-	static constexpr bool value = false;
-};
+> : std::false_type {};
 
 template <
 	bool                      IsAlias,

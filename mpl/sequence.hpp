@@ -8,6 +8,7 @@
 #ifndef Z7B8D69C3_CCF7_48FA_93A9_80063B6C585B
 #define Z7B8D69C3_CCF7_48FA_93A9_80063B6C585B
 
+#include <type_traits>
 #include <mpl/integer.hpp>
 
 namespace mpl {
@@ -336,16 +337,10 @@ struct contains<T, sequence<U, Us...>>
 };
 
 template <class T, class... Us>
-struct contains<T, sequence<T, Us...>>
-{
-	static constexpr bool value = true;
-};
+struct contains<T, sequence<T, Us...>> : std::true_type {};
 
 template <class T>
-struct contains<T, sequence<>>
-{
-	static constexpr bool value = false;
-};
+struct contains<T, sequence<>> : std::false_type {};
 
 /*
 ** `reverse`

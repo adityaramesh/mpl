@@ -90,18 +90,12 @@ using get = typename get_impl<Key, Map>::type;
 */
 
 template <class Map>
-struct is_multimap
-{
-	static constexpr bool value = false;
-};
+struct is_multimap : std::false_type {};
 
 template <class Key, class... Values, class... Pairs>
 struct is_multimap<
 	sequence<sequence<Key, sequence<Values...>>, Pairs...>
->
-{
-	static constexpr bool value = true;
-};
+> : std::true_type {};
 
 /*
 ** `insert`
@@ -513,16 +507,10 @@ template <
 struct contains_key<
 	Key,
 	sequence<sequence<Key, CurrentValue>, Pairs...>
->
-{
-	static constexpr bool value = true;
-};
+> : std::true_type {};
 
 template <class Key>
-struct contains_key<Key, sequence<>>
-{
-	static constexpr bool value = false;
-};
+struct contains_key<Key, sequence<>> : std::false_type {};
 
 /*
 ** `contains_value`
@@ -554,16 +542,10 @@ template <
 struct contains_value<
 	Value,
 	sequence<sequence<CurrentKey, Value>, Pairs...>
->
-{
-	static constexpr bool value = true;
-};
+> : std::true_type {};
 
 template <class Value>
-struct contains_value<Value, sequence<>>
-{
-	static constexpr bool value = false;
-};
+struct contains_value<Value, sequence<>> : std::false_type {};
 
 }
 

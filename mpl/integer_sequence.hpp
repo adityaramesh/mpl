@@ -20,8 +20,8 @@ template <std::uintmax_t... Ts>
 using coordinates = integer_sequence<Ts...>;
 
 // Causes compiler error if done this way. I forgot if I reported this one.
-//template <std::uintmax_t... Ts>
-//using extents = integer_sequence<Ts...>;
+// template <std::uintmax_t... Ts>
+// using extents = integer_sequence<Ts...>;
 
 template <std::uintmax_t... Ts>
 using extents = sequence<integer<Ts>...>;
