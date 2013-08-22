@@ -22,7 +22,7 @@ Subject Responses to Trial Substances
   with long ears and green hats.
 - ICC (14): Constipation and obsessive nose-picking.
 - Clang (3.4): Diarrhea and temporary lactose-intolerance.
-- MSVC: **pffffft** Hah! **COFF! COFF! COFF!**
+- MSVC: **COFF! COFF! COFF!**
 
 # TODO
 
